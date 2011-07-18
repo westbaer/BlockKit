@@ -7,7 +7,7 @@
 //
 
 #import "BlockPlaygroundAppDelegate.h"
-#import "BlockPlaygroundViewController.h"
+#import "BlockPlaygroundTableViewController.h"
 #import "NSArray-BKAdditions.h"
 #import "NSDate-BKAdditions.h"
 
@@ -56,8 +56,8 @@
     }];
     
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[BlockPlaygroundViewController alloc] initWithNibName:@"BlockPlaygroundViewController" bundle:nil]; 
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.viewController = [[[BlockPlaygroundTableViewController alloc] init] autorelease]; 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

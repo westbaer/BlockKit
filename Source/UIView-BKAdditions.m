@@ -87,7 +87,7 @@ static void BKDrawRectBlockViewBKDrawRect(id self, SEL _cmd, CGRect dirtyRect)
         }
     }
     
-    if (!hasDrawn) {
+    if (!hasDrawn && [self respondsToSelector:@selector(bk_drawRect:)]) {
         objc_msgSend(self, @selector(bk_drawRect:), dirtyRect);
     }
 }

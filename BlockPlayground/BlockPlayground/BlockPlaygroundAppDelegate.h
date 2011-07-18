@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class BlockPlaygroundViewController;
+@class BlockPlaygroundTableViewController;
 
 @interface BlockPlaygroundAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) BlockPlaygroundViewController *viewController;
+@property (strong, nonatomic) BlockPlaygroundTableViewController *viewController;
 
 @end
