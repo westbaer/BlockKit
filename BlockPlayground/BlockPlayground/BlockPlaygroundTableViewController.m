@@ -9,6 +9,7 @@
 #import "BlockPlaygroundTableViewController.h"
 #import "NSTimer-BKAdditions.h"
 #import "NSEnumerator-BKAdditions.h"
+#import "UIImage-BKAdditions.h"
 
 @implementation BlockPlaygroundTableViewController
 
@@ -25,6 +26,11 @@
                 *stop = YES;
             }
         }];
+			
+				[UIImage imageWithContentsOfURL:[NSURL URLWithString:@"http://nyan.cat/images/nyancat.png"] block:^(UIImage *myImage) {
+					[self.tableView setBackgroundColor:[UIColor clearColor]];
+					[self.tableView setBackgroundView:[[[UIImageView alloc] initWithImage:myImage] autorelease]];
+				}];
     }
     return self;
 }
